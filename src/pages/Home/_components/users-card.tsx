@@ -40,7 +40,7 @@ export const UsersCard = ({ data, users }: { data: boolean; users: Transaction[]
                 <div className="w-full">
                   <CountUp
                     start={0}
-                    end={totalUsers}
+                    end={users.length}
                     decimal=","
                     duration={2.5}
                   />
