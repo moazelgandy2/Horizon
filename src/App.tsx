@@ -10,13 +10,13 @@ function App() {
         <Toaster />
         <SideBar />
         <div className="flex size-full flex-col gap-y-3">
-          <div className="flex rounded-b-md shadow h-16 items-center border justify-between p-5 shadow-creditCard sm:p-8 md:hidden">
+          <div className="sticky top-0 z-40 bg-white flex rounded-md shadow m-2 h-16 items-center border justify-between p-5 shadow-creditCard sm:p-8 md:hidden">
             <img
               src="/logo.png"
               alt="Menu Logo"
               className="w-[30px] h-[30px]"
             />
-            <div className="">
+            <div>
               <MobileNavBar />
             </div>
           </div>

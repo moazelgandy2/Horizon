@@ -30,7 +30,8 @@ export const SideBar = () => {
               <Link
                 className={cn(
                   "flex gap-3 w-full items-center py-1 md:p-3 2xl:p-4 rounded-lg justify-center xl:justify-start",
-                  isActive && "bg-primary"
+                  isActive && "bg-primary",
+                  !isActive && "hover:bg-gray-200"
                 )}
                 to={link.route}
                 key={index}

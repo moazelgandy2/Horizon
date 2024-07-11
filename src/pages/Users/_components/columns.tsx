@@ -43,6 +43,7 @@ export const columns: ColumnDef<CustomerTotal>[] = [
   },
   {
     accessorKey: "totalAmount",
+    accessorFn: (row) => row.totalAmount.toString(),
     header: ({ column }) => {
       return (
         <Button
