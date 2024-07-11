@@ -8,7 +8,7 @@ import { calculateTotalAmountPerCustomer } from "@/lib/data";
 export const UsersCard = ({ data, users }: { data: boolean; users: Transaction[] }) => {
   const totalUsers = calculateTotalAmountPerCustomer(users).length;
   const moreThan100 = users.filter((user) => user.amount > 100).length;
-  const lessThan100 = totalUsers - moreThan100;
+  const lessThan100 = users.length - moreThan100;
   return (
     <>
       <section className="flex w-full items-center gap-4 rounded-xl border border-gray-200 shadow-chart sm:gap-6 sm:p-6">
