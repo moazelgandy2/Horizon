@@ -3,9 +3,10 @@ import { HomePageChart } from "./chart";
 import { HomePageChart2 } from "./chart2";
 import { cn } from "@/lib/utils";
 import { Transaction } from "./columns";
+import { calculateTotalAmountPerCustomer } from "@/lib/data";
 
 export const UsersCard = ({ data, users }: { data: boolean; users: Transaction[] }) => {
-  const totalUsers = users.length;
+  const totalUsers = calculateTotalAmountPerCustomer(users).length;
   const moreThan100 = users.filter((user) => user.amount > 100).length;
   const lessThan100 = totalUsers - moreThan100;
   return (

@@ -4,7 +4,6 @@ import { DataTable } from "./_components/data-table";
 import { UsersCard } from "./_components/users-card";
 
 export const Home = () => {
-  // const data: Transaction[] = data;
   return (
     <>
       <section className=" flex w-full flex-row max-xl:max-h-screen">
