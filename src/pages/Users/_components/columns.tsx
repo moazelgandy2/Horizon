@@ -22,7 +22,7 @@ export type Transaction = {
   id: string;
   customer_id: string;
   amount: number;
-  date: string;
+  date: Date;
   name: string;
 };
 
@@ -32,6 +32,7 @@ interface CustomerTotal {
   customer_id: string;
   totalAmount: number;
 }
+
 export const columns: ColumnDef<CustomerTotal>[] = [
   {
     accessorKey: "id",

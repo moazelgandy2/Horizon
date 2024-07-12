@@ -1,7 +1,9 @@
-import { calculateTotalAmountPerCustomer, data } from "@/lib/data";
+import { calculateTotalAmountPerCustomer } from "@/lib/data";
 import { DataTable } from "./_components/data-table";
 import { columns } from "./_components/columns";
+import { useStore } from "@/lib/store";
 export const UsersPage = () => {
+  const { data } = useStore();
   const transactions = calculateTotalAmountPerCustomer(data);
   console.log(transactions);
   return (

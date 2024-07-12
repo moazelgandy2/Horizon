@@ -17,9 +17,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { data, getMonthlyTransactionData } from "@/lib/data";
+import { getMonthlyTransactionData } from "@/lib/data";
+import { useStore } from "@/lib/store";
 
-const desktopData = getMonthlyTransactionData(data);
 const chartConfig = {
   transactions: {
     label: "Transactions",
@@ -78,6 +78,9 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function HomePageChart2() {
+  const { data } = useStore();
+  const desktopData = getMonthlyTransactionData(data);
+
   const id = "pie-interactive";
   const [activeMonth, setActiveMonth] = React.useState(desktopData[0].month);
 

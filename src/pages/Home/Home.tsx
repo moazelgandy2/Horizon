@@ -1,9 +1,10 @@
-import { data } from "@/lib/data";
+import { useStore } from "@/lib/store";
 import { columns } from "./_components/columns";
 import { DataTable } from "./_components/data-table";
 import { UsersCard } from "./_components/users-card";
 
 export const Home = () => {
+  const { data } = useStore();
   return (
     <>
       <section className=" flex w-full flex-row max-xl:max-h-screen">

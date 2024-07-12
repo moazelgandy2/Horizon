@@ -2,8 +2,16 @@ import { SideBar } from "@/components/side-bar";
 import { Outlet } from "react-router-dom";
 import { MobileNavBar } from "./components/mobile-nav-bar";
 import { Toaster } from "react-hot-toast";
+import { useStore } from "./lib/store";
+import { useEffect } from "react";
 
 function App() {
+  const { update } = useStore();
+
+  useEffect(() => {
+    update();
+  }, []);
+
   return (
     <>
       <div className="flex h-screen w-full overflow-y-auto">

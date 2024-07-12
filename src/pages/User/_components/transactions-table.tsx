@@ -16,7 +16,7 @@ export function DataTable({ transactions }: { transactions: Transaction[] }) {
       <TableCaption>A list of users recent transactions.</TableCaption>
       <TableHeader>
         <TableRow>
-          <TableHead className="w-[100px]">Id</TableHead>
+          <TableHead className="w-[150px]">Transaction Id</TableHead>
           <TableHead>User</TableHead>
           <TableHead>Amount</TableHead>
           <TableHead className="text-right">date</TableHead>
@@ -33,7 +33,9 @@ export function DataTable({ transactions }: { transactions: Transaction[] }) {
                 currency: "USD",
               })}
             </TableCell>
-            <TableCell className="text-right">{transaction.date}</TableCell>
+            <TableCell className="text-right">
+              {transaction.date.toString().split("T")[0]}
+            </TableCell>
           </TableRow>
         ))}
       </TableBody>

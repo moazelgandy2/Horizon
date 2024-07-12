@@ -1,9 +1,10 @@
-import { data } from "@/lib/data";
 import { useParams } from "react-router-dom";
 import { DataTable } from "./_components/transactions-table";
 import { UserAreaChart } from "./_components/area-chart";
+import { useStore } from "@/lib/store";
 
 export const UserPage = () => {
+  const { data } = useStore();
   const params = useParams();
   const { id } = params;
   const transactions = data.filter((t) => t.customer_id === id);

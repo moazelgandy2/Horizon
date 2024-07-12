@@ -1,9 +1,11 @@
-import { data, findMonthlyPeaks, summarizeTransactions } from "@/lib/data";
+import { findMonthlyPeaks, summarizeTransactions } from "@/lib/data";
 import { AreaChartPage } from "./_components/area-chart";
 import { SummaryItem } from "@/lib/data";
 import { Component } from "./_components/peak-chart";
+import { useStore } from "@/lib/store";
 
 export const ChartsPage = () => {
+  const { data } = useStore();
   const summary: SummaryItem[] = summarizeTransactions(data);
   const monthlyPeaks = findMonthlyPeaks(data);
   return (
