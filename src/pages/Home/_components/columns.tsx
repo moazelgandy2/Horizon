@@ -66,7 +66,7 @@ export const columns: ColumnDef<Transaction>[] = [
     cell: ({ row }) => {
       return (
         <div className="text-center flex justify-center w-full font-medium">
-          {row.original.date.toLocaleDateString().split("T")[0]}
+          {row.original.date.toString().split("T")[0]}
         </div>
       );
     },
