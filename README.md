@@ -40,5 +40,69 @@ Make sure you have the following installed on your machine:
 1. Clone the repository:
    ```sh
    git clone https://github.com/moazelgandy2/route-task.git
-   cd route-task
    ```
+2. Navigate to the project directory:
+   ```sh
+    cd route-task
+   ```
+3. Install the dependencies:
+
+   ```sh
+   npm install
+
+   #or
+
+   yarn install
+   ```
+
+### Running the Application 🚀
+
+For development (USE JSON-SERVER):
+
+1. Start the JSON server:
+
+   ```sh
+    npx json-server db.json
+   ```
+
+   by default, the server will run on port 3000.
+
+2. Start the React application:
+
+   ```sh
+    npm run dev
+
+    # or
+
+    yarn dev
+   ```
+
+   The application will run on port 5173.
+
+3. For production (USING express JS):
+   follow the instructions in this repo: [route-task-backend](https://github.com/moazelgandy2/route-task-server)
+
+### Usage 📝
+
+1. Open your browser and go to `http://localhost:5173`.
+2. Use the data table to view, filter, and sort customer transactions.
+3. Navigate to the customer details page to see individual transactions and graphs.
+4. Visit the analytics page to view detailed graphical analyses of customer transactions.
+
+### Project Structure 📁
+
+The project structure is as follows:
+
+```sh
+src/
+|-- components/ # Reusable UI components
+|-- pages/ # Application pages
+|-- services/ # API services
+|-- store/ # State management
+|-- App.tsx # Main application component
+|-- main.tsx # Entry point
+```
+
+### Contact 📧
+
+For any questions or feedback, feel free to reach out to me at **contact@moazelgandy.tech**
