@@ -76,7 +76,7 @@ For development (USE JSON-SERVER):
    The application will run on port 5173.
 
 3. For production (USING express JS):
-   follow the instructions in this repo: [route-task-backend](https://github.com/moazelgandy2/route-task-server)
+   follow the instructions in this repo: [route-task-server](https://github.com/moazelgandy2/route-task-server)
 
 ### Usage 📝
 
