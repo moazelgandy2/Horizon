@@ -1,7 +1,3 @@
-# Creating the README.md file content with emojis and excitement
-
-readme_content = """
-
 # 🎉 Customer Transactions Dashboard 🚀
 
 ## Project Description 📊
