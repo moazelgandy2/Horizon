@@ -26,10 +26,10 @@ export const initializeStore = create<Store>((set) => ({
   update: async () => {
     set({ loading: true });
     const customersData = await axios.get(
-      "http://route-task-server-production.up.railway.app/customers"
+      "https://route-task-server-production.up.railway.app/customers"
     );
     const transactionsData = await axios.get(
-      "http://route-task-server-production.up.railway.app/transactions"
+      "https://route-task-server-production.up.railway.app/transactions"
     );
     const customers: Customer[] = customersData.data;
     const transactions: TransactionOnly[] = transactionsData.data;
