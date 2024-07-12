@@ -1,30 +1,44 @@
-# React + TypeScript + Vite
+# Creating the README.md file content with emojis and excitement
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+readme_content = """
 
-Currently, two official plugins are available:
+# 🎉 Customer Transactions Dashboard 🚀
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Description 📊
 
-## Expanding the ESLint configuration
+Welcome to the Customer Transactions Dashboard! This project is a web application that fetches data from an API to retrieve customer and transaction information. It displays the data in a data table with filtering and sorting capabilities and provides detailed views and graphical analyses of customer transactions. The application includes the following exciting features:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- 🔍 **Data Table**: View customers and transactions with filtering by name or transaction amount and sorting by transaction amount.
+- 📋 **Customer Details**: Detailed view of each customer's transactions.
+- 📈 **Customer Graphs**: Graph showing the transactions of a selected customer.
+- 📊 **Analytics Page**:
+  - Transactions across different years, displaying daily transactions for 2022, 2023, and 2024.
+  - Peak transactions for each month across the years.
+  - Total transactions per month for each year.
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used 💻
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- ⚛️ **React JS with TypeScript**: For building the user interface.
+- 🎨 **Tailwind CSS**: For styling the application.
+- 💎 **ShadCN/UI**: For UI components.
+- 🌐 **Zustand**: For state management.
+- 🔔 **React Hot Toast**: For notifications and alerts.
+- 🌐 **Axios**: For fetching data from the API.
+- 🔀 **Faker.js**: For generating random data.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Getting Started 🚀
+
+### Prerequisites 📋
+
+Make sure you have the following installed on your machine:
+
+- Node.js (>= 14.x)
+- npm (>= 6.x) or yarn (>= 1.x)
+
+### Installation 🛠️
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/moazelgandy2/route-task.git
+   cd route-task
+   ```

@@ -1,7 +1,7 @@
 import { faker } from "@faker-js/faker";
 import { Transaction } from "@/pages/Home/_components/columns";
 
-function generateRandomAmount() {
+export function generateRandomAmount() {
   const ranges = [
     { min: 1, max: 99 },
     { min: 100, max: 500 },
