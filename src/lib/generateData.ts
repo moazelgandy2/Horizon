@@ -3,7 +3,7 @@ import { Transaction } from "@/pages/Home/_components/columns";
 
 function generateRandomAmount() {
   const ranges = [
-    { min: 1, max: 99 }, // Amounts below 100
+    { min: 1, max: 99 },
     { min: 100, max: 500 },
     { min: 1000, max: 5000 },
   ];
@@ -21,7 +21,7 @@ export const generateTransactions = (
   let customerId = 1;
 
   for (let i = 0; i < numberOfCustomers; i++) {
-    const customerName = faker.name.findName();
+    const customerName = faker.name.fullName();
     const customerTransactions = [];
 
     for (let j = 0; j < numberOfTransactionsPerCustomer; j++) {
@@ -34,7 +34,7 @@ export const generateTransactions = (
         name: customerName,
         customer_id: `728ed52f${customerId}`,
         amount: amount,
-        date: date, // Format date as YYYY-MM-DD
+        date: date,
       });
 
       transactions.push({
@@ -42,7 +42,7 @@ export const generateTransactions = (
         name: customerName,
         customer_id: `728ed52f${customerId}`,
         amount: amount,
-        date: date, // Format date as YYYY-MM-DD
+        date: date,
       });
     }
 
