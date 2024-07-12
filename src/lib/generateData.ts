@@ -26,7 +26,9 @@ export const generateTransactions = (
 
     for (let j = 0; j < numberOfTransactionsPerCustomer; j++) {
       const amount = generateRandomAmount();
-      const date = faker.date.between("2022-01-01", "2024-12-31").toISOString().split("T")[0];
+      const date = new Date(
+        faker.date.between("2022-01-01", "2024-12-31").toISOString().split("T")[0]
+      );
       customerTransactions.push({
         id: (transactions.length + 1).toString(),
         name: customerName,
