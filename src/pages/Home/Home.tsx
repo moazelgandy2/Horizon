@@ -14,10 +14,6 @@ export const Home = () => {
           toast("Loading data, please wait...", {
             icon: "🔃",
           })}
-        {!isLoading &&
-          toast("Data loaded successfully", {
-            icon: "🚀",
-          })}
 
         <div className="flex w-full flex-1 flex-col gap-8 px-5 sm:px-8 py-7 lg:py-12 xl:max-h-screen ">
           <div className="flex flex-col justify-between gap-8">
