@@ -16,15 +16,15 @@ export type TransactionOnly = {
 
 type Store = {
   data: Transaction[];
-  loading: boolean;
+  isLoading: boolean;
   update: () => void;
 };
 
 export const initializeStore = create<Store>((set) => ({
   data: [],
-  loading: false,
+  isLoading: false,
   update: async () => {
-    set({ loading: true });
+    set({ isLoading: true });
     const customersData = await axios.get(
       "https://route-task-server-production.up.railway.app/customers"
     );
@@ -36,7 +36,7 @@ export const initializeStore = create<Store>((set) => ({
 
     const transformedData: Transaction[] = transformData(customers, transactions);
 
-    set({ data: transformedData, loading: false });
+    set({ data: transformedData, isLoading: false });
   },
 }));
 
