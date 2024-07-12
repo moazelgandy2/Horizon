@@ -63,6 +63,13 @@ export const columns: ColumnDef<Transaction>[] = [
   {
     accessorKey: "date",
     header: "Date",
+    cell: ({ row }) => {
+      return (
+        <div className="text-center flex justify-center w-full font-medium">
+          {row.original.date.toLocaleDateString().split("T")[0]}
+        </div>
+      );
+    },
   },
 
   {
