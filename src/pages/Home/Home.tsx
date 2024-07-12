@@ -27,7 +27,7 @@ export const Home = () => {
             </div>
             <div className="grid grid-cols-2 max-md:grid-cols-1 gap-3">
               <div className="flex flex-col gap-4 max-md:grid-cols-1">
-                {isLoading && <Skeleton className="w-full h-44" />}
+                {isLoading == true && <Skeleton className="w-full h-44" />}
                 {!isLoading && (
                   <UsersCard
                     users={data}
@@ -40,7 +40,7 @@ export const Home = () => {
                     data={false}
                   />
                 )}
-                {isLoading && <Skeleton className="w-full h-96" />}
+                {isLoading == true && <Skeleton className="w-full h-96" />}
               </div>
               <div className=" gap-4 max-md:grid-cols-1">
                 Recent Transactions
