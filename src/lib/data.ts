@@ -38,6 +38,12 @@ export type MonthlyPeaks = {
 export type YearlyMonthlyPeaks = {
   [key: string]: MonthlyPeaks[];
 };
+export type MonthlyTotals = {
+  month: string;
+  year1: number;
+  year2: number;
+  year3: number;
+};
 
 export const sideBarLinks: SideBarLink[] = [
   {
@@ -275,3 +281,46 @@ function sortMonthlyPeaks(yearlyMonthlyPeaks: YearlyMonthlyPeaks): YearlyMonthly
 
   return sortedPeaks;
 }
+
+export const getMonthlyTransactionCounts = (transactions: Transaction[]): MonthlyTotals[] => {
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const years = [2022, 2023, 2024];
+
+  const monthlyTotals: MonthlyTotals[] = months.map((month, monthIndex) => {
+    const totals = { month, year1: 0, year2: 0, year3: 0 };
+
+    transactions.forEach((transaction) => {
+      const transactionDate = new Date(transaction.date);
+      const transactionMonth = transactionDate.getMonth();
+      const transactionYear = transactionDate.getFullYear();
+
+      if (transactionMonth === monthIndex) {
+        if (transactionYear === years[0]) {
+          totals.year1 += 1;
+        } else if (transactionYear === years[1]) {
+          totals.year2 += 1;
+        } else if (transactionYear === years[2]) {
+          totals.year3 += 1;
+        }
+      }
+    });
+
+    return totals;
+  });
+
+  return monthlyTotals;
+};

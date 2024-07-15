@@ -25,8 +25,12 @@ export const initializeStore = create<Store>((set) => ({
   isLoading: false,
   update: async () => {
     set({ isLoading: true });
-    const customersData = await axios.get("http://localhost:3000/customers");
-    const transactionsData = await axios.get("http://localhost:3000/transactions");
+    const customersData = await axios.get(
+      "https://route-task-server-production.up.railway.app/customers"
+    );
+    const transactionsData = await axios.get(
+      "https://route-task-server-production.up.railway.app/transactions"
+    );
     const customers: Customer[] = customersData.data;
     const transactions: TransactionOnly[] = transactionsData.data;
 
